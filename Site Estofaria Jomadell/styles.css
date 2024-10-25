@@ -1,0 +1,361 @@
+/* Redefinindo as margens, preenchimentos e o box-sizing para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo a fonte padrão, cor de fundo e cor do texto para o corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Estilos para o cabeçalho da página: alinhamento e espaçamento */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Logo: imagem responsiva com altura máxima */
+.logo img {
+    max-height: 80px;
+    width: auto;
+}
+
+/* Links de navegação: organização em coluna para telas menores */
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Coluna para telas pequenas */
+    gap: 20px;
+    margin-left: 0;
+}
+
+/* Links de navegação: exibição em bloco para telas pequenas */
+.nav-links li {
+    display: block; /* Bloco para dispositivos móveis */
+}
+
+/* Estilos dos links de navegação */
+.nav-links li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Efeito hover nos links de navegação */
+.nav-links li a:hover {
+    color: #ff5005;
+}
+
+/* Contato e link para WhatsApp: alinhamento dos itens */
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+/* Link do WhatsApp: estilo do texto e alinhamento do ícone */
+.whatsapp-link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do ícone do WhatsApp */
+.whatsapp-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Efeito hover no link do WhatsApp */
+.whatsapp-link:hover {
+    color: #ff5005;
+}
+
+/* Media Query: Estilos aplicados para telas maiores */
+@media (min-width: 768px) {
+    .nav-links {
+        flex-direction: row; /* Alteração para linha em telas maiores */
+    }
+
+    .nav-links li {
+        display: inline-block; /* Exibição em linha para telas maiores */
+    }
+}
+
+/* Seção de herói: tamanho e posicionamento da imagem */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 450px; /* Altura reduzida para telas menores */
+    background-color: #000000;
+    overflow: hidden;
+}
+
+/* Imagem da seção herói */
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Texto sobreposto na imagem da seção herói */
+.hero-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Seção de apresentação */
+.apresentacao {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ff5005;
+}
+
+/* Texto da seção "Sobre" */
+.sobre {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilo do título da seção "Sobre" */
+.sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Estilo do parágrafo da seção "Sobre" */
+.sobre p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #f5f5f5;
+}
+
+/* Seção de serviços */
+.servicos {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Título da seção de serviços */
+.servicos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Contêiner para organizar os serviços */
+.servicos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cartões individuais de serviço */
+.servico {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+/* Efeito hover nos cartões de serviço */
+.servico:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Título dos serviços */
+.servico h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Parágrafos dentro dos cartões de serviço */
+.servico p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Seção de trabalhos */
+.trabalho {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Título da seção de trabalhos */
+.trabalho h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Parágrafo da seção de trabalhos */
+.trabalho p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Galeria de fotos */
+.fotos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilo das imagens da galeria de fotos */
+.fotos img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Seção de orçamento */
+.orcamento {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título da seção de orçamento */
+.orcamento h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Parágrafo da seção de orçamento */
+.orcamento p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Botões de contato/orçamento */
+.orcamento-contato-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilos dos botões de contato/orçamento */
+.orcamento-contato-buttons button {
+    padding: 10px 20px;
+    background-color: #ff5005;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+/* Efeito hover nos botões de contato/orçamento */
+.orcamento-contato-buttons button:hover {
+    background-color: #e04800;
+    transform: translateY(-3px);
+}
+
+/* Contêiner do mapa */
+.map-container {
+    margin-top: 20px;
+}
+
+/* Título da seção de mapa */
+.map-container h2 {
+    margin-bottom: 10px;
+}
+
+/* Estilos do iframe do mapa */
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+/* Seção de mensagem */
+.mensagem {
+    padding: 40px 20px;
+    background-color: #ff5005;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Título da seção de mensagem */
+.mensagem h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Parágrafo da seção de mensagem */
+.mensagem p {
+    font-size: 1.2rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Contêiner do rodapé */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Seções do rodapé: Informações, links e redes sociais */
+.footer-info,
+.footer-links,
+.footer-social {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Títulos das seções do rodapé */
+.footer-info h3,
+.footer-links h3,
+.footer-social h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Texto do rodapé */
+.footer-info p,
+.footer-links ul,
+.footer-social a {
+    font-size: 1rem;
+}
+
+/* Links do rodapé */
+.footer-links ul {
+    list-style: none;
+}
